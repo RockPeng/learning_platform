@@ -5,15 +5,17 @@ type SearchInputProps = {
   placeholder?: string;
   label?: string;
   className?: string;
+  size?: "md" | "lg";
 };
 
 export function SearchInput({
   placeholder = "Search anything...",
   label = "Search",
   className,
+  size = "md",
 }: SearchInputProps) {
   return (
-    <label className={cn("vertex-search", className)}>
+    <label className={cn("vertex-search", `vertex-search--${size}`, className)}>
       <span className="sr-only">{label}</span>
       <Search size={16} aria-hidden="true" />
       <input type="search" placeholder={placeholder} />

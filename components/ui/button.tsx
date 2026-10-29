@@ -3,7 +3,7 @@ import { ExternalLink, PlayCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type ButtonVariant = "primary" | "secondary" | "tertiary" | "text";
-export type ButtonSize = "lg" | "md";
+export type ButtonSize = "lg" | "md" | "xl";
 
 type ButtonBaseProps = {
   variant?: ButtonVariant;

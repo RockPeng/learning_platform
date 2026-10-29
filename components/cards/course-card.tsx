@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { BarChart3, Clock3, Layers3 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -7,6 +8,8 @@ type CourseCardProps = {
   level: string;
   duration: string;
   modules: number;
+  logo?: ReactNode;
+  layout?: "row" | "stacked";
 };
 
 export function CourseCard({
@@ -15,14 +18,18 @@ export function CourseCard({
   level,
   duration,
   modules,
+  logo,
+  layout = "row",
 }: CourseCardProps) {
   return (
-    <Card className="vertex-learning-card vertex-course-card">
+    <Card
+      className={`vertex-learning-card vertex-course-card vertex-course-card--${layout}`}
+    >
       <div className="vertex-course-card__identity">
         <div className="vertex-course-card__tile" aria-hidden="true">
-          N
+          {logo ?? "N"}
         </div>
-        <div>
+        <div className="vertex-course-card__copy">
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
