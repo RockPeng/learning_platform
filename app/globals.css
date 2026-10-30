@@ -1699,6 +1699,54 @@ select {
   color: var(--vertex-neutral-900);
 }
 
+.vertex-auth-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vertex-auth-button {
+  min-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.vertex-auth-button:focus-visible {
+  outline: 2px solid var(--vertex-primary-600);
+  outline-offset: 2px;
+}
+
+.vertex-auth-button--secondary {
+  border-color: var(--vertex-primary-600);
+  background: transparent;
+  color: var(--vertex-primary-600);
+}
+
+.vertex-auth-button--secondary:hover {
+  background: #ffeee5;
+}
+
+.vertex-auth-button--primary {
+  background: var(--vertex-primary-600);
+  color: white;
+}
+
+.vertex-auth-button--primary:hover {
+  background: #ea5a0b;
+}
+
+.vertex-auth-placeholder {
+  width: 140px;
+  height: 40px;
+}
+
 .vertex-avatar {
   display: grid;
   width: 48px;
@@ -2002,6 +2050,16 @@ select {
 
   .vertex-site-header__actions {
     gap: 10px;
+  }
+
+  .vertex-auth-controls {
+    gap: 6px;
+  }
+
+  .vertex-auth-button {
+    min-height: 36px;
+    padding: 0 9px;
+    font-size: 12px;
   }
 
   .vertex-avatar {
