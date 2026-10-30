@@ -1590,7 +1590,7 @@ select {
 .vertex-page-frame {
   position: relative;
   isolation: isolate;
-  width: min(100%, 960px);
+  width: min(100%, 1440px);
   min-height: 100vh;
   margin: 0 auto;
   border-right: 1px solid var(--color-canvas-line);
@@ -1604,7 +1604,7 @@ select {
   z-index: -1;
   top: 0;
   bottom: 0;
-  width: max(0px, calc((100vw - 960px) / 2));
+  width: max(0px, calc((100vw - 1440px) / 2));
   background: repeating-linear-gradient(
     135deg,
     transparent 0,
@@ -1957,14 +1957,14 @@ select {
   flex: 1.2 1 0;
 }
 
-@media (min-width: 961px) {
+@media (min-width: 1441px) {
   .vertex-page-frame::before,
   .vertex-page-frame::after {
     display: block;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1440px) {
   .vertex-page-frame {
     width: 100%;
   }

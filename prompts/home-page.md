@@ -40,8 +40,8 @@ later without touching the markup.
 
 Sampled from `design/vertex-home.png` (1024×1536) and treated as 1:1 CSS px.
 
-- Framed content column: vertical hairlines at x≈33 and x≈990 → **960px column**, centered, with
-  diagonally striped gutters filling the rest of the viewport.
+- Framed content column: **1440px max-width**, centered, with diagonally striped gutters filling
+  the rest of the viewport.
 - Header: 96px tall, bottom hairline, 40px horizontal padding, avatar 48px.
 - Eyebrow pill: 210×40, ~11px uppercase, ~0.12em tracking, primary-500 on a near-white fill.
 - Hero heading: Playfair bold ~60px / 74px line height, two lines, centered.
@@ -74,7 +74,7 @@ Sampled from `design/vertex-home.png` (1024×1536) and treated as 1:1 CSS px.
      Playfair title, divider above the meta row). `row` stays the current default so
      `/design-system` renders unchanged.
 4. **New, genuinely missing pieces** (nothing in the library covers them):
-   - `components/layout/page-frame.tsx` — the 960px column, its side hairlines, and the striped
+   - `components/layout/page-frame.tsx` — the 1440px column, its side hairlines, and the striped
      gutters (CSS `repeating-linear-gradient`, no image).
    - `components/layout/site-header.tsx` — composes the existing `Navbar` with the right-side
      actions (notification bell, avatar).
@@ -116,10 +116,9 @@ Sampled from `design/vertex-home.png` (1024×1536) and treated as 1:1 CSS px.
 
 ## Requirements
 
-- Desktop matches the reference: layout, spacing, type, colour, and the framed column with striped
-  gutters.
+- Desktop matches the reference styling in a centered 1440px content frame with striped gutters.
 - Responsive with no horizontal scroll at 375px: grid goes 1 → 2 (md) → 3 (lg) columns; hero type
-  scales down; the frame's side hairlines and gutters collapse below 960px; header padding tightens
+  scales down; the frame's side hairlines and gutters collapse below 1440px; header padding tightens
   and the nav wraps; search and CTA go full width on small screens.
 - Tokens only — no raw hex in components beyond the brand marks' own colours.
 - Semantic landmarks (`<header>`, `<main>`, `<section>`) with headings in order; the decoration and
